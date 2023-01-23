@@ -1,6 +1,6 @@
 ![image](images/microchip.jpg) 
 
-## %repoDescritpion%
+## dspic33ck curiosity touch uart oob
 
 Board Image if any.
 
