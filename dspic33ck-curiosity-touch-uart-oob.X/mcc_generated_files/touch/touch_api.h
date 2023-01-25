@@ -29,7 +29,7 @@ extern "C" {
     /*----------------------------------------------------------------------------
      *     include files
      *----------------------------------------------------------------------------*/
-#include <p33CK1024mp710.h>
+#include <xc.h>
 #include "include/qtm_acq_cvd_dspic33ck_api.h"
 #include "include/qtm_touch_key_0x0002_api.h"
 #include "include/qtm_freq_hop_auto_0x0004_api.h"
