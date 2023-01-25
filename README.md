@@ -1,6 +1,6 @@
 ![image](images/microchip.jpg)
 
-## dsPIC33CK Curiosity Touch CAN LIN Curiosity Development Board - Touch UART OOB Demo
+## dsPIC33C Touch CAN LIN Curiosity Development Board - Touch UART OOB Demo
 
 ![Board](images/board.png)
 
@@ -38,7 +38,7 @@ On board general purpose LEDs can also be controlled by sending commands via Dat
 
 **MPLAB® X IDE Setup**
 
-- Open the `dspic33ck-curiosity-touch-uart-oob.X` project in MPLAB® X IDE
+- Open the `dspic33c-touch-can-lin-curiosity-touch-uart-oob-demo.X` project in MPLAB® X IDE
 - Build and program the device
 
 **Data Visualizer Tool Setup**
@@ -46,7 +46,7 @@ On board general purpose LEDs can also be controlled by sending commands via Dat
 - Open standalone or plugin of MPLAB® Data Visualizer
 - Select `Variable Streamers` at the left most tabs<br>
   ![data streamer setup 1](images/datastreamer_setup.png)
-- Click on `Import` at the top left corner, navigate to `..\dspic33ck-curiosity-touch-uart-oob.X\mcc_generated_files\data_streamer` and select the `data_streamer.ds` file<br>
+- Click on `Import` at the top left corner, navigate to `..\dspic33c-touch-can-lin-curiosity-touch-uart-oob-demo.X\mcc_generated_files\data_streamer` and select the `data_streamer.ds` file<br>
   ![data streamer setup 2](images/datastreamer_setup2.png)
 - Once the file is opened, a properties window pops up listing the two variables `potValue` which contains potentiometer position and `touchValue` which contains touch position on slider. These two variables are streamed out from the device to the data visualizer via UART. Click on Save<br>
   ![data streamer setup 3](images/datastreamer_setup3.png)

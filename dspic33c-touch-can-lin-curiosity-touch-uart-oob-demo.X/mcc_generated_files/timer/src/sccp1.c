@@ -7,9 +7,7 @@
  * 
  * @brief     This is the generated driver source file for SCCP1-TIMER driver
  *
- * @version   Firmware Driver Version 1.4.1
- *
- * @version   PLIB Version 1.5.0-dev.3
+ * @version   Driver Version 1.4.0
  *
  * @skipline  Device : dsPIC33CK1024MP710
 */

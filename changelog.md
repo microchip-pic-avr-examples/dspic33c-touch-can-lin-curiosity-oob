@@ -1,4 +1,4 @@
-# dspic33ck-curiosity-touch-uart-oob v1.0.0
+#dspic33c-touch-can-lin-curiosity-touch-uart-oob-demo v1.0.0
 
 ### Release Highlights
 

@@ -3,10 +3,10 @@
    "category":"com.microchip.ide.project",
    "content":{
       "metaDataVersion":"1.3.0",
-      "name":"com.microchip.mplabx.project.dspic33ck-curiosity-touch-uart-oob",
+      "name":"com.microchip.mplabx.project.dspic33c-touch-can-lin-curiosity-touch-uart-oob-demo",
       "version":"1.0.0",
       "displayName":"dsPIC33CK Touch CAN LIN Curiosity Development Board - OOB Demo",
-      "projectName":"dspic33ck-curiosity-touch-uart-oob",
+      "projectName":"dspic33c-touch-can-lin-curiosity-touch-uart-oob-demo",
       "shortDescription":"This is Touch and UART Demo for dsPIC33CK Curiosity Touch CAN LIN Development Board",
       "ide":{
          "name":"MPLABX",

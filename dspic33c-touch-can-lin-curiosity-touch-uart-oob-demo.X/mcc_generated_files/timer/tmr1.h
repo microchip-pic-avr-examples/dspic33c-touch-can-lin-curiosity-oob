@@ -7,9 +7,7 @@
  * 
  * @brief     This is the generated driver header file for the TMR1 driver
  *
- * @version   Firmware Driver Version 1.4.1
- *
- * @version   PLIB Version 1.4.0-dev.4
+ * @version   Driver Version 1.4.0
  *
  * @skipline  Device : dsPIC33CK1024MP710
 */

@@ -3,7 +3,7 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>dspic33ck-curiosity-touch-uart-oob</name>
+            <name>dspic33c-touch-can-lin-curiosity-touch-uart-oob-demo</name>
             <creation-uuid>383dbf64-c301-4dbd-aaae-58365d17bc0c</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>

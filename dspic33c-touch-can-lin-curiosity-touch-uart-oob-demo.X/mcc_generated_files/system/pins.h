@@ -7,9 +7,11 @@
  *            
  * @brief     The Pin Driver directs the operation and function of 
  *            the selected device pins using dsPIC MCUs.
- *            
- * @version   Driver Version 1.0.0
- *            
+ *
+ * @version   Firmware Driver Version 1.0.1
+ *
+ * @version   PLIB Version 1.1.0
+ *
  * @skipline  Device : dsPIC33CK1024MP710
 */
 
