@@ -7,7 +7,9 @@
  * 
  * @brief     Watchdog Timer Driver using dsPIC MCUs.
  *
- * @version   Driver Version 1.0.0
+ * @version   Firmware Driver Version 1.0.1
+ *
+ * @version   PLIB Version 1.1.0
  *
  * @skipline  Device : dsPIC33CK1024MP710
 */

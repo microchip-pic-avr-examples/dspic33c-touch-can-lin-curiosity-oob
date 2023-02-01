@@ -11,7 +11,9 @@
  *            the user application to other device which might have varied feature list. 
  *            The content in this file is strictly "read only" and should not be altered.
  *            
- * @version   Driver Version 1.4.0
+ * @version   Firmware Driver Version 1.4.3
+ *
+ * @version   PLIB Version 2.3.0
  *            
  * @skipline  Device : dsPIC33CK1024MP710
 */

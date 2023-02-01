@@ -16,6 +16,7 @@
                 <sourceRootElem>application</sourceRootElem>
                 <sourceRootElem>bsp</sourceRootElem>
                 <sourceRootElem>mcc_generated_files/touch</sourceRootElem>
+                <sourceRootElem>../../dspic33c-touch-can-lin-curiosity-touch-can-fd-demo/dspic33c-touch-can-lin-curiosity-touch-can-fd-demo.X/mcc_generated_files/touch/datastreamer</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

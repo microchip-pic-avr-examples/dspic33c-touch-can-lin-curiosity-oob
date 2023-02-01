@@ -59,7 +59,7 @@ void PINS_Initialize(void)
      * Setting the GPIO Direction SFR(s)
      ***************************************************************************/
     TRISA = 0x01FF;
-    TRISB = 0xBFFD;
+    TRISB = 0xBFFF;
     TRISC = 0xFFFF;
     TRISD = 0xFFFF;
     TRISE = 0xFC3F;
@@ -98,7 +98,7 @@ void PINS_Initialize(void)
      * Setting the Analog/Digital Configuration SFR(s)
      ***************************************************************************/
     ANSELA = 0x001F;
-    ANSELB = 0x039D;
+    ANSELB = 0x039F;
     ANSELC = 0x00CF;
     ANSELD = 0x2C00;
     ANSELE = 0x000F;
@@ -115,36 +115,5 @@ void PINS_Initialize(void)
      __builtin_write_RPCON(0x0800); // lock PPS
 
 
-    /****************************************************************************
-     * Interrupt On Change: config
-     ***************************************************************************/
-    CNCONDbits.CNSTYLE = 1; //Config for PORTD
-    CNCONDbits.ON = 1; //Config for PORTD
-    CNCONFbits.CNSTYLE = 1; //Config for PORTF
-    CNCONFbits.ON = 1; //Config for PORTF
-
-    /* Initialize IOC Interrupt Handler*/
-
-    /****************************************************************************
-     * Interrupt On Change: Interrupt Enable
-     ***************************************************************************/
-    IFS4bits.CNDIF = 0; //Clear CNDI interrupt flag
-    IEC4bits.CNDIE = 1; //Enable CNDI interrupt
-    IFS0bits.CNFIF = 0; //Clear CNFI interrupt flag
-    IEC0bits.CNFIE = 1; //Enable CNFI interrupt
-}
-
-/* Interrupt service function for the CNDI interrupt. */
-void __attribute__ (( interrupt, no_auto_psv )) _CNDInterrupt (void)
-{
-    // Clear the flag
-    IFS4bits.CNDIF = 0;
-}
-
-/* Interrupt service function for the CNFI interrupt. */
-void __attribute__ (( interrupt, no_auto_psv )) _CNFInterrupt (void)
-{
-    // Clear the flag
-    IFS0bits.CNFIF = 0;
 }
 

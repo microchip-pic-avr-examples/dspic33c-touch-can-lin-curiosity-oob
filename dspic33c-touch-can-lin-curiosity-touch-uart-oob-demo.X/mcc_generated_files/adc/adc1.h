@@ -7,7 +7,9 @@
  *            
  * @brief     This is the generated driver header file for the ADC1 driver
  *            
- * @version   Driver Version 1.4.0
+ * @version   Firmware Driver Version 1.4.3
+ *
+ * @version   PLIB Version 2.3.0
  *            
  * @skipline  Device : dsPIC33CK1024MP710
 */

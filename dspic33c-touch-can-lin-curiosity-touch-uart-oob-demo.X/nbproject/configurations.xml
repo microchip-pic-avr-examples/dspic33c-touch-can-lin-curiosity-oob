@@ -148,6 +148,7 @@
     <Elem>application</Elem>
     <Elem>bsp</Elem>
     <Elem>mcc_generated_files/touch</Elem>
+    <Elem>../../dspic33c-touch-can-lin-curiosity-touch-can-fd-demo/dspic33c-touch-can-lin-curiosity-touch-can-fd-demo.X/mcc_generated_files/touch/datastreamer</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

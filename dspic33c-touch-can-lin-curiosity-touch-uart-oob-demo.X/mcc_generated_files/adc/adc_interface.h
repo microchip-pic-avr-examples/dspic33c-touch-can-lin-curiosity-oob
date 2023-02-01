@@ -8,7 +8,9 @@
  * @brief     High-Speed, 12-Bit Multiple SARs Analog-to-Digital Converter driver 
  *            using dsPIC MCUs.
  *            
- * @version   Driver Version 1.4.0
+ * @version   Firmware Driver Version 1.4.3
+ *
+ * @version   PLIB Version 2.3.0
  *            
  * @skipline  Device : dsPIC33CK1024MP710
 */

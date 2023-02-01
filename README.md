@@ -28,7 +28,7 @@ On board general purpose LEDs can also be controlled by sending commands via Dat
 
 ## Hardware Used
 
-- [dsPIC33C Touch CAN LIN Curiosity Development Board](www.microchip.com/EV97U97A)
+- [dsPIC33C Touch CAN LIN Curiosity Development Board](https://www.microchip.com/EV97U97A)
 
 ## Setup
 
