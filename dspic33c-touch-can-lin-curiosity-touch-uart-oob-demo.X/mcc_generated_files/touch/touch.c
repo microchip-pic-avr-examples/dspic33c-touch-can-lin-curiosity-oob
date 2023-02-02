@@ -49,7 +49,7 @@ SUBSTITUTE  GOODS,  TECHNOLOGY,  SERVICES,  OR  ANY  CLAIMS  BY  THIRD   PARTIES
  *----------------------------------------------------------------------------*/
 
 #include "touch.h"
-#include "../data_streamer/data_streamer.h"
+#include "datastreamer/datastreamer.h"
 #include "../timer/tmr1.h"
 
 /*----------------------------------------------------------------------------

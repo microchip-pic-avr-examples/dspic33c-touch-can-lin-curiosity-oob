@@ -49,6 +49,11 @@
           <itemPath>mcc_generated_files/timer/sccp1.h</itemPath>
         </logicalFolder>
         <logicalFolder name="touch" displayName="touch" projectFiles="true">
+          <logicalFolder name="datastreamer"
+                         displayName="datastreamer"
+                         projectFiles="true">
+            <itemPath>mcc_generated_files/touch/datastreamer/datastreamer.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="include" displayName="include" projectFiles="true">
             <itemPath>mcc_generated_files/touch/include/qtm_acq_cvd_dspic33ck_api.h</itemPath>
             <itemPath>mcc_generated_files/touch/include/qtm_common_components_api.h</itemPath>
@@ -120,6 +125,11 @@
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="touch" displayName="touch" projectFiles="true">
+          <logicalFolder name="datastreamer"
+                         displayName="datastreamer"
+                         projectFiles="true">
+            <itemPath>mcc_generated_files/touch/datastreamer/datastreamer.c</itemPath>
+          </logicalFolder>
           <logicalFolder name="include" displayName="include" projectFiles="true">
             <itemPath>mcc_generated_files/touch/include/qtm_acq_dspic33ck_mp_0x004b.X.a</itemPath>
             <itemPath>mcc_generated_files/touch/include/qtm_freq_hop_auto_dspic33ckmp_0x0004.X.a</itemPath>
