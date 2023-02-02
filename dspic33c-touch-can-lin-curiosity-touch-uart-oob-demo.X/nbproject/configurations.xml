@@ -150,7 +150,6 @@
                    displayName="Important Files"
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
-      <itemPath> dspic33c-touch-can-lin-curiosity-touch-uart-oob-demo.mc3</itemPath>
       <itemPath>dspic33c-touch-can-lin-curiosity-touch-uart-oob-demo.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
