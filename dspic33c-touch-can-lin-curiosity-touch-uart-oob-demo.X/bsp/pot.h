@@ -34,13 +34,13 @@
 #include "stdint.h"
 
 /**
- * @ingroup  uartdriver
+ * @ingroup  touch_demo
  * @brief    This macro defines the ADC max count
  */
 #define ADC_MAX_COUNT 4096U
 
 /**
- * @ingroup  uartdriver
+ * @ingroup  touch_demo
  * @brief    This macro defines the reference voltage of ADC
  */
 #define ADC_REFERENCE 3.3

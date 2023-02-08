@@ -5,9 +5,9 @@
       "metaDataVersion":"1.3.0",
       "name":"com.microchip.mplabx.project.dspic33c-touch-can-lin-curiosity-touch-uart-oob-demo",
       "version":"1.0.0",
-      "displayName":"dsPIC33CK Touch CAN LIN Curiosity Development Board - OOB Demo",
+      "displayName":"dsPIC33C Touch CAN LIN Curiosity Development Board - OOB Demo",
       "projectName":"dspic33c-touch-can-lin-curiosity-touch-uart-oob-demo",
-      "shortDescription":"This is Touch and UART Demo for dsPIC33CK Curiosity Touch CAN LIN Development Board",
+      "shortDescription":"This is Touch and UART Demo for dsPIC33C Curiosity Touch CAN LIN Development Board",
       "ide":{
          "name":"MPLABX",
          "semverRange":">=6.05.0"
