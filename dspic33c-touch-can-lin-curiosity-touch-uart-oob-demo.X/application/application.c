@@ -22,7 +22,7 @@
 */
 
 #include "demo_config.h"
-#include "operations.h"
+#include "application.h"
 #include "../bsp/led.h"
 #include "../bsp/console.h"
 #include "../bsp/touch.h"
@@ -36,11 +36,11 @@ static enum LED_CONTROL
 }ledControl;
 
 
-static void Operation_Touch_Tasks(void);
-static void Operation_Potentiometer_Tasks(void);
-static void Operation_Led_Tasks(void);
+static void Process_Touch_Tasks(void);
+static void Process_Potentiometer_Tasks(void);
+static void Process_Led_Tasks(void);
 
-void Operations_Initialze(void)
+void Application_Initialze(void)
 {
     CONSOLE_Initilaize();
     LED_Initialize();
@@ -48,17 +48,17 @@ void Operations_Initialze(void)
     TOUCH_Initialize();
 }
 
-void Operations_Tasks(void)
+void Application_Tasks(void)
 {
-    Operation_Touch_Tasks();
-    Operation_Potentiometer_Tasks();
-    Operation_Led_Tasks();
+    Process_Touch_Tasks();
+    Process_Potentiometer_Tasks();
+    Process_Led_Tasks();
 #if defined DATASTREAMER_ON
         WriteFrame();
 #endif
 }
 
-static void Operation_Touch_Tasks(void)
+static void Process_Touch_Tasks(void)
 {
     TOUCH_Tasks();
 #if defined DATASTREAMER_ON
@@ -112,7 +112,7 @@ static void Operation_Touch_Tasks(void)
     }
 }
 
-static void Operation_Potentiometer_Tasks(void)
+static void Process_Potentiometer_Tasks(void)
 {
     float potVoltage;
     potVoltage = POT_VoltageGet();
@@ -122,7 +122,7 @@ static void Operation_Potentiometer_Tasks(void)
 #endif
 }
 
-static void Operation_Led_Tasks(void)
+static void Process_Led_Tasks(void)
 {
     enum CONSOLE_CMDS consoleInput;
     CONSOLE_Tasks();

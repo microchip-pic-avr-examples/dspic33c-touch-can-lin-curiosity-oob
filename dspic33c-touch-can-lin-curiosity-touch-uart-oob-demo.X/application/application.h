@@ -1,5 +1,5 @@
 /**
- * @file      operations.h
+ * @file      application.h
  * 
  * @ingroup   touch_demo
  * 
@@ -36,14 +36,14 @@
  * @param[in]   none
  * @return      none
  */
-void Operations_Initialze(void);
+void Application_Initialze(void);
 
 /**
  * @ingroup     touch_demo
- * @brief       This function performs tasks of selected operating mode
+ * @brief       This function performs application tasks
  * @param[in]   none
  * @return      none
  */
-void Operations_Tasks(void);
+void Application_Tasks(void);
 
 #endif //OPERATION_MODE_H

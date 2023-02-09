@@ -20,8 +20,8 @@
 */
 
 #include "mcc_generated_files/system/system.h"
-#include "application/touch_demo.h"
 #include "mcc_generated_files/data_streamer/data_streamer.h"
+#include "application/application.h"
 
 /*
     Main application
@@ -31,10 +31,10 @@
 int main(void)
 {
     SYSTEM_Initialize();
-    Demo_Initialize();
+    Application_Initialze();
 
     while(1)
     {
-        Demo_Tasks();
+        Application_Tasks();
     }    
 }
