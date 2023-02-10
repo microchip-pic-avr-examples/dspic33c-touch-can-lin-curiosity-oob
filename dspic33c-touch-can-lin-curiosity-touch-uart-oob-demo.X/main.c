@@ -20,7 +20,6 @@
 */
 
 #include "mcc_generated_files/system/system.h"
-#include "mcc_generated_files/data_streamer/data_streamer.h"
 #include "application/application.h"
 
 /*

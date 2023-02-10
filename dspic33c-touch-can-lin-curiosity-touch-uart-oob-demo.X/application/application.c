@@ -21,13 +21,11 @@
     THIS SOFTWARE.
 */
 
-#include "demo_config.h"
 #include "application.h"
 #include "../bsp/led.h"
 #include "../bsp/console.h"
 #include "../bsp/touch.h"
 #include "../bsp/pot.h"
-#include "../mcc_generated_files/data_streamer/data_streamer.h"
 
 static enum LED_CONTROL
 {
@@ -53,17 +51,11 @@ void Application_Tasks(void)
     Process_Touch_Tasks();
     Process_Potentiometer_Tasks();
     Process_Led_Tasks();
-#if defined DATASTREAMER_ON
-        WriteFrame();
-#endif
 }
 
 static void Process_Touch_Tasks(void)
 {
     TOUCH_Tasks();
-#if defined DATASTREAMER_ON
-    DataStreamer.touchValue = TOUCH_PositionValueGet();
-#endif
     switch(TOUCH_PadPositionGet())
     {
         case TOUCH_PAD_A:
@@ -116,10 +108,6 @@ static void Process_Potentiometer_Tasks(void)
 {
     float potVoltage;
     potVoltage = POT_VoltageGet();
-
-#if defined DATASTREAMER_ON
-    DataStreamer.potValue = potVoltage;
-#endif
 }
 
 static void Process_Led_Tasks(void)

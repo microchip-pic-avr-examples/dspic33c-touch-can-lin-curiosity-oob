@@ -42,7 +42,6 @@
 #include "../../timer/tmr1.h"
 #include "../../uart/uart1.h"
 #include "../interrupt.h"
-#include "../../data_streamer/data_streamer.h"
 
 
 void SYSTEM_Initialize(void)
@@ -56,7 +55,6 @@ void SYSTEM_Initialize(void)
     UART1_Initialize();
     INTERRUPT_GlobalEnable();
     INTERRUPT_Initialize();
-    DataStreamer_Initialize();
 }
 
 /**

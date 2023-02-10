@@ -44,6 +44,7 @@
 #include "../include/qtm_freq_hop_auto_0x0004_api.h"
 #include "../include/qtm_acq_cvd_dspic33ck_api.h"
 #include "../include/qtm_scroller_0x000b_api.h"
+#include "../../../bsp/pot.h"
 
 
 /*----------------------------------------------------------------------------
@@ -169,8 +170,11 @@ void datastreamer_output(void)
         datastreamer_transmit(get_filter_frequency(count));
     }
 
-
+    
     datastreamer_transmit(0);
+    u16temp_output = POT_PositionGet();
+    datastreamer_transmit((uint8_t)(u16temp_output & 0x00FFu));
+    datastreamer_transmit((uint8_t)((u16temp_output & 0xFF00u) >> 8u));
     datastreamer_transmit(sequence++);
 
     // End token

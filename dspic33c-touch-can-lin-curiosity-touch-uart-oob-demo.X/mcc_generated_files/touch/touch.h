@@ -251,7 +251,7 @@ extern "C" {
     /**********************************************************/
     /***************** Communication - Data Streamer **********/
     /**********************************************************/
-#define DEF_TOUCH_DATA_STREAMER_ENABLE 0u
+#define DEF_TOUCH_DATA_STREAMER_ENABLE 1u
 
 #define DATA_STREAMER_BOARD_TYPE USER_BOARD
 

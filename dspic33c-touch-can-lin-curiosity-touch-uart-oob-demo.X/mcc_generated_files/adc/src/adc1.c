@@ -124,8 +124,8 @@ void ADC1_Initialize (void)
     ADCON3L = 0x0;
     // C0EN enabled; C1EN disabled; C2EN disabled; C3EN disabled; SHREN disabled; CLKDIV 1; CLKSEL FOSC/2; 
     ADCON3H = (uint16_t)0x1 & (uint16_t)0xFF00; //Disabling C0EN, C1EN, C2EN, C3EN and SHREN bits
-    // SAMC0EN enabled; SAMC1EN disabled; SAMC2EN disabled; SAMC3EN disabled; SYNCTRG0 disabled; SYNCTRG1 disabled; SYNCTRG2 disabled; SYNCTRG3 disabled; 
-    ADCON4L = 0x1;
+    // SAMC0EN disabled; SAMC1EN disabled; SAMC2EN disabled; SAMC3EN disabled; SYNCTRG0 disabled; SYNCTRG1 disabled; SYNCTRG2 disabled; SYNCTRG3 disabled; 
+    ADCON4L = 0x0;
     // C0CHS AN0; C1CHS AN1; C2CHS AN2; C3CHS AN3; 
     ADCON4H = 0x0;
     // SIGN0 disabled; DIFF0 disabled; SIGN1 disabled; DIFF1 disabled; SIGN2 disabled; DIFF2 disabled; SIGN3 disabled; DIFF3 disabled; SIGN4 disabled; DIFF4 disabled; SIGN5 disabled; DIFF5 disabled; SIGN6 disabled; DIFF6 disabled; SIGN7 disabled; DIFF7 disabled; 
@@ -204,8 +204,8 @@ void ADC1_Initialize (void)
     ADLVLTRGL = 0x0;
     // LVLEN16 disabled; LVLEN17 disabled; LVLEN18 disabled; LVLEN27 disabled; LVLEN28 disabled; LVLEN29 disabled; LVLEN30 disabled; LVLEN31 disabled; LVLEN19 disabled; LVLEN20 disabled; LVLEN21 disabled; LVLEN22 disabled; LVLEN23 disabled; LVLEN24 disabled; LVLEN25 disabled; LVLEN26 disabled; 
     ADLVLTRGH = 0x0;
-    // SAMC 8; 
-    ADCORE0L = 0x8;
+    // SAMC 0x0; 
+    ADCORE0L = 0x0;
     // SAMC 0x0; 
     ADCORE1L = 0x0;
     // SAMC 0x0; 

@@ -20,7 +20,6 @@
     EXCEED AMOUNT OF FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR 
     THIS SOFTWARE.
 */
-#include "../mcc_generated_files/data_streamer/data_streamer.h"
 #include "touch.h"
 
 static uint8_t  scroller_status   = 0;
