@@ -381,35 +381,42 @@ DB_TYPE_LABEL, // Element Type
 
 {
 0:0:1, // Dashboard ID TabGroupID TabElementID
-90, // Element ID
-DB_TYPE_LABEL, // Element Type
+20, // Element ID
+DB_TYPE_GRAPH, // Element Type
 0, // Z-Index (GUI stack order)
-2, 0, // X-coordinate
-225, 0, // Y-coordinate
-194, 0, // Width
-33, 0, // Height
-22, // Font Size
-0,
-1, // Horizontal Alignment
-0, // Vertical Alignment
-0, 255, 255, 255, // Background Color
-255, 0, 0, 0, // Foreground Color
-'P', 'o', 't', 'e', 'n', 't', 'i', 'o', 'm', 'e', 't', 'e', 'r', ' ', 'D', 'a', 't', 'a', '\0', // Text
+242, 2, // X-coordinate
+184, 0, // Y-coordinate
+18, 2, // Width
+3, 1, // Height
+255, 255, 255, // Title color
+0, 0, 0, // Background color
+20, 20, 20, // Graph background color
+'P', 'o', 't', 'e', 'n', 't', 'i', 'o', 'm', 'e', 't', 'e', 'r', ' ', 'D', 'a', 't', 'a', '\0', // Title
+1, // Number of plots
+0,0,0,0, // X Minimum
+0,0,160,65, // X Maximum
+0,0,0,0, // Y Minimum
+0,0,96,64, // Y Maximum
+1,
+1,
 };
 
 {
 0:0:1, // Dashboard ID TabGroupID TabElementID
-20, // Element ID
-DB_TYPE_PROGRESS, // Element Type
+91, // Element ID
+DB_TYPE_LABEL, // Element Type
 0, // Z-Index (GUI stack order)
-198, 0, // X-coordinate
-227, 0, // Y-coordinate
-103, 1, // Width
-30, 0, // Height
-0,0,0,0, // Minimum
-0,16,0,0, // Maximum
-0,0,0,0, // Value
-6, 176, 37, // Color
+238, 2, // X-coordinate
+137, 0, // Y-coordinate
+20, 2, // Width
+38, 0, // Height
+18, // Font Size
+3,
+1, // Horizontal Alignment
+1, // Vertical Alignment
+102, 113, 113, 110, // Background Color
+255, 0, 0, 0, // Foreground Color
+'P', 'o', 't', 'e', 'n', 't', 'i', 'o', 'm', 'e', 't', 'e', 'r', ' ', 'D', 'a', 't', 'a', '\0', // Text
 };
 
 {
@@ -1400,32 +1407,39 @@ DB_TYPE_LABEL, // Element Type
 {
 0:0:4, // Dashboard ID TabGroupID TabElementID
 21, // Element ID
-DB_TYPE_PROGRESS, // Element Type
-87, // Z-Index (GUI stack order)
-169, 3, // X-coordinate
-202, 0, // Y-coordinate
-161, 1, // Width
-31, 0, // Height
-0,0,0,0, // Minimum
-0,16,0,0, // Maximum
-0,0,0,0, // Value
-6, 176, 37, // Color
+DB_TYPE_GRAPH, // Element Type
+0, // Z-Index (GUI stack order)
+206, 4, // X-coordinate
+11, 1, // Y-coordinate
+18, 2, // Width
+3, 1, // Height
+255, 255, 255, // Title color
+0, 0, 0, // Background color
+20, 20, 20, // Graph background color
+'P', 'o', 't', 'e', 'n', 't', 'i', 'o', 'm', 'e', 't', 'e', 'r', ' ', 'D', 'a', 't', 'a', '\0', // Title
+1, // Number of plots
+0,0,0,0, // X Minimum
+0,0,160,65, // X Maximum
+0,0,0,0, // Y Minimum
+0,0,96,64, // Y Maximum
+1,
+1,
 };
 
 {
 0:0:4, // Dashboard ID TabGroupID TabElementID
-89, // Element ID
+92, // Element ID
 DB_TYPE_LABEL, // Element Type
 0, // Z-Index (GUI stack order)
-220, 2, // X-coordinate
-205, 0, // Y-coordinate
-203, 0, // Width
-30, 0, // Height
-22, // Font Size
-0,
-0, // Horizontal Alignment
-0, // Vertical Alignment
-0, 255, 255, 255, // Background Color
+208, 4, // X-coordinate
+217, 0, // Y-coordinate
+12, 2, // Width
+40, 0, // Height
+18, // Font Size
+3,
+1, // Horizontal Alignment
+1, // Vertical Alignment
+76, 80, 80, 80, // Background Color
 255, 0, 0, 0, // Foreground Color
 'P', 'o', 't', 'e', 'n', 't', 'i', 'o', 'm', 'e', 't', 'e', 'r', ' ', 'D', 'a', 't', 'a', '\0', // Text
 };

@@ -78,6 +78,10 @@ void datastreamer_output(void)
 	int16_t           i, temp_int_calc;
     static uint8_t sequence = 0u;
     uint16_t u16temp_output;
+    union {
+        float tempInFloat;
+        uint8_t tempInBytes[4];
+    } tempFloatnBytes;
 	uint8_t           u8temp_output, send_header;
 	volatile uint16_t count_bytes_out;
 
@@ -172,9 +176,11 @@ void datastreamer_output(void)
 
     
     datastreamer_transmit(0);
-    u16temp_output = POT_PositionGet();
-    datastreamer_transmit((uint8_t)(u16temp_output & 0x00FFu));
-    datastreamer_transmit((uint8_t)((u16temp_output & 0xFF00u) >> 8u));
+    tempFloatnBytes.tempInFloat = POT_VoltageGet();
+    datastreamer_transmit((uint8_t)(tempFloatnBytes.tempInBytes[0]));
+    datastreamer_transmit((uint8_t)(tempFloatnBytes.tempInBytes[1]));
+    datastreamer_transmit((uint8_t)(tempFloatnBytes.tempInBytes[2]));
+    datastreamer_transmit((uint8_t)(tempFloatnBytes.tempInBytes[3]));
     datastreamer_transmit(sequence++);
 
     // End token

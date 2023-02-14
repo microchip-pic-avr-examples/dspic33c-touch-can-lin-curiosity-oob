@@ -34,6 +34,6 @@ B,15,1,HopFrequency1
 B,16,1,HopFrequency2
 
 B,1,3,QTouchLibError
-D,1,4,PotData
+F,1,4,PotData_in_V
 
 B,1,2,FRAME_END

@@ -124,5 +124,5 @@ QTouchLibError, 18 (Column:0;Row:1)
 FrameCounter, 19 (Column:0;Row:0)
 QTouchLibError, 19 (Column:0;Row:1)
 
-PotData,20
-PotData,21
+PotData_in_V,20
+PotData_in_V,21
