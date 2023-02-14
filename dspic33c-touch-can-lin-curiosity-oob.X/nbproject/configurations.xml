@@ -132,7 +132,7 @@
                    displayName="Important Files"
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
-      <itemPath>dspic33c-touch-can-lin-curiosity-touch-uart-oob-demo.mc3</itemPath>
+      <itemPath>dspic33c-touch-can-lin-curiosity-oob.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -888,7 +888,7 @@
         <property key="periphComp5.gte" value="gt"/>
         <property key="periphComp6.gte" value="gt"/>
         <property key="programmerToGoFilePath"
-                  value="C:/MCU16_repos/github_code_examples/ dspic33c-touch-can-lin-curiosity-touch-uart-oob-demo/ dspic33c-touch-can-lin-curiosity-touch-uart-oob-demo.X/debug/default/ dspic33c-touch-can-lin-curiosity-touch-uart-oob-demo_ptg"/>
+                  value="C:/MCU16_repos/github_code_examples/ dspic33c-touch-can-lin-curiosity-oob/ dspic33c-touch-can-lin-curiosity-oob.X/debug/default/ dspic33c-touch-can-lin-curiosity-oob_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>

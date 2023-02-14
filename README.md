@@ -38,7 +38,7 @@ On board general purpose LEDs can also be controlled by sending commands via Dat
 
 **MPLAB® X IDE Setup**
 
-- Open the `dspic33c-touch-can-lin-curiosity-touch-uart-oob-demo.X` project in MPLAB® X IDE
+- Open the `dspic33c-touch-can-lin-curiosity-oob.X` project in MPLAB® X IDE
 - Build and program the device
 
 **Data Visualizer Tool Setup**
@@ -46,7 +46,7 @@ On board general purpose LEDs can also be controlled by sending commands via Dat
 - Open standalone or plugin of MPLAB® Data Visualizer
 - Select `Variable Streamers` at the left most tabs<br>
   ![data streamer setup 1](images/datastreamer_setup.png)
-- Click on `Import` at the top left corner, navigate to `dspic33c-touch-can-lin-curiosity-touch-uart-oob-demo.X\mcc_generated_files\touch\data_streamer` and select the `03EB00000000000000AA5501.ds` file<br>
+- Click on `Import` at the top left corner, navigate to `dspic33c-touch-can-lin-curiosity-oob.X\mcc_generated_files\touch\data_streamer` and select the `03EB00000000000000AA5501.ds` file<br>
   ![data streamer setup 2](images/datastreamer_setup2.png)
 - Once the file is opened, a properties window pops up listing the variables. These variables are streamed out from the device to the data visualizer via UART. Click on Save<br>
   ![data streamer setup 3](images/datastreamer_setup3.png)
