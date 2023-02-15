@@ -27,8 +27,8 @@
     THIS SOFTWARE.
 */
 
-#ifndef OPERATION_MODE_H
-#define OPERATION_MODE_H
+#ifndef APPLICATION_H
+#define APPLICATION_H
 
 /**
  * @ingroup     touch_demo
@@ -46,4 +46,4 @@ void Application_Initialze(void);
  */
 void Application_Tasks(void);
 
-#endif //OPERATION_MODE_H
+#endif //APPLICATION_H
