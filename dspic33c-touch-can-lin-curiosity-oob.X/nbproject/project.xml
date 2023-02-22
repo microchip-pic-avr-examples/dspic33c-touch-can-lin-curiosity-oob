@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>com.microchip.mplab.nbide.embedded.makeproject</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/make-project/1">
+            <name>dspic33c-touch-can-lin-curiosity-oob</name>
+            <creation-uuid>383dbf64-c301-4dbd-aaae-58365d17bc0c</creation-uuid>
+            <make-project-type>0</make-project-type>
+            <c-extensions>c</c-extensions>
+            <cpp-extensions/>
+            <header-extensions>h</header-extensions>
+            <asminc-extensions/>
+            <sourceEncoding>ISO-8859-1</sourceEncoding>
+            <make-dep-projects/>
+            <sourceRootList>
+                <sourceRootElem>application</sourceRootElem>
+                <sourceRootElem>bsp</sourceRootElem>
+                <sourceRootElem>mcc_generated_files/touch</sourceRootElem>
+                <sourceRootElem>../../dspic33c-touch-can-lin-curiosity-touch-can-fd-demo/dspic33c-touch-can-lin-curiosity-touch-can-fd-demo.X/mcc_generated_files/touch/datastreamer</sourceRootElem>
+            </sourceRootList>
+            <confList>
+                <confElem>
+                    <name>default</name>
+                    <type>2</type>
+                </confElem>
+            </confList>
+            <formatting>
+                <project-formatting-style>false</project-formatting-style>
+            </formatting>
+        </data>
+    </configuration>
+</project>
