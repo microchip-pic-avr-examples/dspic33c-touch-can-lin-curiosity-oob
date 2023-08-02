@@ -41,7 +41,7 @@
 #include "../uart1.h"
 
 // Section: Macro Definitions
-#define UART1_CLOCK 4000000U
+#define UART1_CLOCK 100000000U
 #define UART1_BAUD_TO_BRG_WITH_FRACTIONAL(x) (UART1_CLOCK/(x))
 #define UART1_BAUD_TO_BRG_WITH_BRGH_1(x) (UART1_CLOCK/(4U*(x))-1U)
 #define UART1_BAUD_TO_BRG_WITH_BRGH_0(x) (UART1_CLOCK/(16U*(x))-1U)
@@ -49,12 +49,12 @@
 #define UART1_BRG_TO_BAUD_WITH_BRGH_1(x) (UART1_CLOCK/(4U*((x)+1U)))
 #define UART1_BRG_TO_BAUD_WITH_BRGH_0(x) (UART1_CLOCK/(16U*((x)+1U)))
 
-#define UART1_MIN_ACHIEVABLE_BAUD_WITH_FRACTIONAL 4U
-#define UART1_MIN_ACHIEVABLE_BAUD_WITH_BRGH_1 1U
+#define UART1_MIN_ACHIEVABLE_BAUD_WITH_FRACTIONAL 95U
+#define UART1_MIN_ACHIEVABLE_BAUD_WITH_BRGH_1 24U
 
 // Section: Driver Interface
 
-const struct UART_INTERFACE UART1_Drv = {
+const struct UART_INTERFACE TouchUART = {
     .Initialize = &UART1_Initialize,
     .Deinitialize = &UART1_Deinitialize,
     .Read = &UART1_Read,
@@ -111,8 +111,8 @@ void UART1_Initialize(void)
     U1STA = 0x80;
     // URXISEL ; UTXBE ; UTXISEL ; URXBE ; STPMD ; TXWRE ; 
     U1STAH = 0x2E;
-    // BaudRate 9592.33; Frequency 4000000 Hz; BRG 417; 
-    U1BRG = 0x1A1;
+    // BaudRate 38402.46; Frequency 100000000 Hz; BRG 2604; 
+    U1BRG = 0xA2C;
     // BRG 0; 
     U1BRGH = 0x0;
     
@@ -254,11 +254,17 @@ void UART1_BaudRateSet(uint32_t baudRate)
         U1MODEbits.BRGH = 0;
         brgValue = UART1_BAUD_TO_BRG_WITH_FRACTIONAL(baudRate);
     }
-    else
+    else if(baudRate >= UART1_MIN_ACHIEVABLE_BAUD_WITH_BRGH_1)
     {
         U1MODEHbits.BCLKMOD = 0;
         U1MODEbits.BRGH = 1;
         brgValue = UART1_BAUD_TO_BRG_WITH_BRGH_1(baudRate);
+    }
+    else
+    {
+        U1MODEHbits.BCLKMOD = 0;
+        U1MODEbits.BRGH = 0;
+        brgValue = UART1_BAUD_TO_BRG_WITH_BRGH_0(baudRate);
     }
     U1BRG = brgValue & 0xFFFFU;
     U1BRGH = (brgValue >>16U) & 0x000FU;

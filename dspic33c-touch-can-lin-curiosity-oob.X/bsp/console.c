@@ -66,15 +66,15 @@ static void CMD_Reset(void)
 void CONSOLE_Initilaize(void)
 {
     CMDTimer.TimeoutCallbackRegister(CMDTimer_TimeoutCallback);
-    UART1_Drv.Initialize();
+    TouchUART.Initialize();
 }
 
 void CONSOLE_Tasks(void)
 {
     uint8_t readChar;
-    if(UART1_Drv.IsRxReady())
+    if(TouchUART.IsRxReady())
     {
-        readChar = UART1_Drv.Read();
+        readChar = TouchUART.Read();
         if((readChar != '\r')&&(commandCount <= CMD_MAX_SIZE))
         {
             CMDTimer.Start();

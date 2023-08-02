@@ -21,6 +21,7 @@
 
 #include "mcc_generated_files/system/system.h"
 #include "application/application.h"
+#include "mcc_generated_files/touch/example/touch_example.h"
 
 /*
     Main application

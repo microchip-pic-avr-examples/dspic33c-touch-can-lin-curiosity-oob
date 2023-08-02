@@ -55,109 +55,109 @@
            using the 'Custom Name' field. Application specific name allows the 
            API Portability.
 */
-extern const struct UART_INTERFACE UART1_Drv;
+extern const struct UART_INTERFACE TouchUART;
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART1_Initialize API
  */
-#define UART1_Drv_Initialize UART1_Initialize
+#define TouchUART_Initialize UART1_Initialize
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART1_Deinitialize API
  */
-#define UART1_Drv_Deinitialize UART1_Deinitialize
+#define TouchUART_Deinitialize UART1_Deinitialize
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART1_Read API
  */
-#define UART1_Drv_Read UART1_Read
+#define TouchUART_Read UART1_Read
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART1_Write API
  */
-#define UART1_Drv_Write UART1_Write
+#define TouchUART_Write UART1_Write
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART1_IsRxReady API
  */
-#define UART1_Drv_IsRxReady UART1_IsRxReady
+#define TouchUART_IsRxReady UART1_IsRxReady
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART1_IsTxReady API
  */
-#define UART1_Drv_IsTxReady UART1_IsTxReady
+#define TouchUART_IsTxReady UART1_IsTxReady
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART1_IsTxDone API
  */
-#define UART1_Drv_IsTxDone UART1_IsTxDone
+#define TouchUART_IsTxDone UART1_IsTxDone
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART1_TransmitEnable API
  */
-#define UART1_Drv_TransmitEnable UART1_TransmitEnable
+#define TouchUART_TransmitEnable UART1_TransmitEnable
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART1_TransmitDisable API
  */
-#define UART1_Drv_TransmitDisable UART1_TransmitDisable
+#define TouchUART_TransmitDisable UART1_TransmitDisable
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART1_AutoBaudSet API
  */
-#define UART1_Drv_AutoBaudSet UART1_AutoBaudSet
+#define TouchUART_AutoBaudSet UART1_AutoBaudSet
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART1_AutoBaudQuery API
  */
-#define UART1_Drv_AutoBaudQuery UART1_AutoBaudQuery
+#define TouchUART_AutoBaudQuery UART1_AutoBaudQuery
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART1_AutoBaudEventEnableGet API
  */
-#define UART1_Drv_AutoBaudEventEnableGet UART1_AutoBaudEventEnableGet
+#define TouchUART_AutoBaudEventEnableGet UART1_AutoBaudEventEnableGet
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART1_ErrorGet API
  */
-#define UART1_Drv_ErrorGet UART1_ErrorGet
+#define TouchUART_ErrorGet UART1_ErrorGet
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART1_BRGCountSet API
  */
-#define UART1_Drv_BRGCountSet UART1_BRGCountSet
+#define TouchUART_BRGCountSet UART1_BRGCountSet
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART1_BRGCountGet API
  */
-#define UART1_Drv_BRGCountGet UART1_BRGCountGet
+#define TouchUART_BRGCountGet UART1_BRGCountGet
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART1_BaudRateSet API
  */
-#define UART1_Drv_BaudRateSet UART1_BaudRateSet
+#define TouchUART_BaudRateSet UART1_BaudRateSet
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART1_BaudRateGet API
  */
-#define UART1_Drv_BaudRateGet UART1_BaudRateGet
+#define TouchUART_BaudRateGet UART1_BaudRateGet
 
 // Section: UART1 Driver Routines
 
