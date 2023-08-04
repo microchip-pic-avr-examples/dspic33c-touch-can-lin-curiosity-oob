@@ -37,8 +37,8 @@
         </logicalFolder>
         <logicalFolder name="timer" displayName="timer" projectFiles="true">
           <itemPath>mcc_generated_files/timer/timer_interface.h</itemPath>
-          <itemPath>mcc_generated_files/timer/tmr1.h</itemPath>
           <itemPath>mcc_generated_files/timer/sccp1.h</itemPath>
+          <itemPath>mcc_generated_files/timer/sccp4.h</itemPath>
         </logicalFolder>
         <logicalFolder name="touch" displayName="touch" projectFiles="true">
           <logicalFolder name="datastreamer"
@@ -46,20 +46,22 @@
                          projectFiles="true">
             <itemPath>mcc_generated_files/touch/datastreamer/datastreamer.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="example" displayName="example" projectFiles="true">
+            <itemPath>mcc_generated_files/touch/example/touch_example.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="include" displayName="include" projectFiles="true">
             <itemPath>mcc_generated_files/touch/include/qtm_acq_cvd_dspic33ck_api.h</itemPath>
             <itemPath>mcc_generated_files/touch/include/qtm_common_components_api.h</itemPath>
-            <itemPath>mcc_generated_files/touch/include/qtm_freq_hop_auto_0x0004_api.h</itemPath>
             <itemPath>mcc_generated_files/touch/include/qtm_scroller_0x000b_api.h</itemPath>
             <itemPath>mcc_generated_files/touch/include/qtm_touch_key_0x0002_api.h</itemPath>
+            <itemPath>mcc_generated_files/touch/include/touch_api.h</itemPath>
           </logicalFolder>
           <itemPath>mcc_generated_files/touch/touch.h</itemPath>
-          <itemPath>mcc_generated_files/touch/touch_api.h</itemPath>
         </logicalFolder>
         <logicalFolder name="uart" displayName="uart" projectFiles="true">
-          <itemPath>mcc_generated_files/uart/uart_interface.h</itemPath>
-          <itemPath>mcc_generated_files/uart/uart_types.h</itemPath>
           <itemPath>mcc_generated_files/uart/uart1.h</itemPath>
+          <itemPath>mcc_generated_files/uart/uart_types.h</itemPath>
+          <itemPath>mcc_generated_files/uart/uart_interface.h</itemPath>
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
@@ -102,21 +104,23 @@
         </logicalFolder>
         <logicalFolder name="timer" displayName="timer" projectFiles="true">
           <logicalFolder name="src" displayName="src" projectFiles="true">
-            <itemPath>mcc_generated_files/timer/src/tmr1.c</itemPath>
             <itemPath>mcc_generated_files/timer/src/sccp1.c</itemPath>
+            <itemPath>mcc_generated_files/timer/src/sccp4.c</itemPath>
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="touch" displayName="touch" projectFiles="true">
           <logicalFolder name="datastreamer"
                          displayName="datastreamer"
                          projectFiles="true">
+            <itemPath>mcc_generated_files/touch/datastreamer/03EB00000000000000AA5501.ds</itemPath>
+            <itemPath>mcc_generated_files/touch/datastreamer/03EB00000000000000AA5501.sc</itemPath>
             <itemPath>mcc_generated_files/touch/datastreamer/datastreamer.c</itemPath>
+            <itemPath>mcc_generated_files/touch/datastreamer/03EB00000000000000AA5501.db</itemPath>
+          </logicalFolder>
+          <logicalFolder name="example" displayName="example" projectFiles="true">
+            <itemPath>mcc_generated_files/touch/example/touch_example.c</itemPath>
           </logicalFolder>
           <logicalFolder name="include" displayName="include" projectFiles="true">
-            <itemPath>mcc_generated_files/touch/include/qtm_acq_dspic33ck_mp_0x004b.X.a</itemPath>
-            <itemPath>mcc_generated_files/touch/include/qtm_freq_hop_auto_dspic33ckmp_0x0004.X.a</itemPath>
-            <itemPath>mcc_generated_files/touch/include/qtm_scroller_dspic33ckmp_0x000b.X.a</itemPath>
-            <itemPath>mcc_generated_files/touch/include/qtm_touch_key_dspic33ckmp_0x0002.X.a</itemPath>
           </logicalFolder>
           <itemPath>mcc_generated_files/touch/touch.c</itemPath>
         </logicalFolder>
@@ -151,7 +155,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>pkob4hybrid</platformTool>
         <languageToolchain>XC16</languageToolchain>
-        <languageToolchainVersion>2.00</languageToolchainVersion>
+        <languageToolchainVersion>2.10</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -162,10 +166,9 @@
       <compileType>
         <linkerTool>
           <linkerLibItems>
-            <linkerLibFileItem>mcc_generated_files/touch/include/qtm_acq_dspic33ck_mp_0x004b.X.a</linkerLibFileItem>
-            <linkerLibFileItem>mcc_generated_files/touch/include/qtm_freq_hop_auto_dspic33ckmp_0x0004.X.a</linkerLibFileItem>
-            <linkerLibFileItem>mcc_generated_files/touch/include/qtm_scroller_dspic33ckmp_0x000b.X.a</linkerLibFileItem>
-            <linkerLibFileItem>mcc_generated_files/touch/include/qtm_touch_key_dspic33ckmp_0x0002.X.a</linkerLibFileItem>
+            <linkerLibFileItem>mcc_generated_files/touch/libraries/libqtm_touch_key_dspic33ckmp_0x0002.X.a</linkerLibFileItem>
+            <linkerLibFileItem>mcc_generated_files/touch/libraries/libqtm_acq_dspic33ck_mp_0x004b.X.a</linkerLibFileItem>
+            <linkerLibFileItem>mcc_generated_files/touch/libraries/libqtm_scroller_dspic33ckmp_0x000b.X.a</linkerLibFileItem>
           </linkerLibItems>
         </linkerTool>
         <archiverTool>
@@ -837,6 +840,7 @@
         <property key="SPI 1" value="true"/>
         <property key="SPI 2" value="true"/>
         <property key="SPI 3" value="true"/>
+        <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
         <property key="TIMER1" value="true"/>
         <property key="ToolFirmwareFilePath"
                   value="Press to browse for a specific firmware version"/>
@@ -847,7 +851,9 @@
         <property key="codecoverage.enabled" value="Disable"/>
         <property key="codecoverage.enableoutputtofile" value="false"/>
         <property key="codecoverage.outputfile" value=""/>
-        <property key="communication.interface" value=""/>
+        <property key="communication.activationmode" value="nohv"/>
+        <property key="communication.interface"
+                  value="${communication.interface.default}"/>
         <property key="communication.interface.jtag" value="2wire"/>
         <property key="communication.speed" value="${communication.speed.default}"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
@@ -887,12 +893,20 @@
         <property key="periphComp4.gte" value="gt"/>
         <property key="periphComp5.gte" value="gt"/>
         <property key="periphComp6.gte" value="gt"/>
+        <property key="poweroptions.powerenable" value="false"/>
         <property key="programmerToGoFilePath"
                   value="C:/MCU16_repos/github_code_examples/ dspic33c-touch-can-lin-curiosity-oob/ dspic33c-touch-can-lin-curiosity-oob.X/debug/default/ dspic33c-touch-can-lin-curiosity-oob_ptg"/>
+        <property key="programmerToGoImageName"
+                  value="dspic33c-touch-can-lin-curiosity-oob_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
+        <property key="programoptions.ledbrightness" value="5"/>
+        <property key="programoptions.pgcconfig" value="pull down"/>
+        <property key="programoptions.pgcresistor.value" value="4.7"/>
+        <property key="programoptions.pgdconfig" value="pull down"/>
+        <property key="programoptions.pgdresistor.value" value="4.7"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>
-        <property key="programoptions.pgmspeed" value="Min"/>
+        <property key="programoptions.pgmspeed" value="Med"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"
                   value="${memories.dataflash.default}"/>
@@ -905,11 +919,13 @@
         <property key="programoptions.programcalmem" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
         <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
+        <property key="ptgProgramImage" value="true"/>
+        <property key="ptgSendImage" value="true"/>
         <property key="reset.scl" value="false"/>
         <property key="reset.type" value="MCLR"/>
         <property key="toolpack.updateoptions"
-                  value="toolpack.updateoptions.uselatestoolpack"/>
-        <property key="toolpack.updateoptions.packversion" value="1.8.869"/>
+                  value="toolpack.updateoptions.specifictoolpack"/>
+        <property key="toolpack.updateoptions.packversion" value="1.10.1023"/>
         <property key="tracecontrol.include.timestamp" value="summarydataenabled"/>
         <property key="tracecontrol.select" value="0"/>
         <property key="tracecontrol.stallontracebufferfull" value="false"/>
@@ -980,6 +996,7 @@
         <property key="usartf1io.output" value="window"/>
         <property key="usartf1io.outputfile" value=""/>
         <property key="usartf1io.uartioenabled" value="false"/>
+        <property key="voltagevalue" value="3.25"/>
         <property key="warningmessagebreakoptions.W0001_CORE_BITREV_MODULO_EN"
                   value="report"/>
         <property key="warningmessagebreakoptions.W0002_CORE_SECURE_MEMORYACCESS"
@@ -1351,6 +1368,115 @@
                   value=""/>
         <property key="warningmessagebreakoptions.warningmessages" value="holdstate"/>
       </Tool>
+      <pk4hybrid>
+        <property key="ADC" value="true"/>
+        <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="CLC 1" value="true"/>
+        <property key="CLC 2" value="true"/>
+        <property key="CLC 3" value="true"/>
+        <property key="CLC 4" value="true"/>
+        <property key="CLC 5" value="true"/>
+        <property key="CLC 6" value="true"/>
+        <property key="CLC 7" value="true"/>
+        <property key="CLC 8" value="true"/>
+        <property key="CRC" value="true"/>
+        <property key="DACFRZ" value="true"/>
+        <property key="DMA" value="true"/>
+        <property key="FRZ" value="true"/>
+        <property key="Freeze All Other Peripherals" value="true"/>
+        <property key="I2C 1" value="true"/>
+        <property key="I2C 2" value="true"/>
+        <property key="I2C 3" value="true"/>
+        <property key="MCCP/SCCP 1" value="true"/>
+        <property key="MCCP/SCCP 2" value="true"/>
+        <property key="MCCP/SCCP 3" value="true"/>
+        <property key="MCCP/SCCP 4" value="true"/>
+        <property key="MCCP/SCCP 5" value="true"/>
+        <property key="MCCP/SCCP 6" value="true"/>
+        <property key="MCCP/SCCP 7" value="true"/>
+        <property key="MCCP/SCCP 8" value="true"/>
+        <property key="MCCP/SCCP 9" value="true"/>
+        <property key="PG1" value="true"/>
+        <property key="PG2" value="true"/>
+        <property key="PG3" value="true"/>
+        <property key="PG4" value="true"/>
+        <property key="PG5" value="true"/>
+        <property key="PG6" value="true"/>
+        <property key="PG7" value="true"/>
+        <property key="PG8" value="true"/>
+        <property key="PMP" value="true"/>
+        <property key="PTGFRZ" value="true"/>
+        <property key="QEI1" value="true"/>
+        <property key="QEI2" value="true"/>
+        <property key="QEI3" value="true"/>
+        <property key="REFO" value="true"/>
+        <property key="SENT1" value="true"/>
+        <property key="SENT2" value="true"/>
+        <property key="SPI 1" value="true"/>
+        <property key="SPI 2" value="true"/>
+        <property key="SPI 3" value="true"/>
+        <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
+        <property key="TIMER1" value="true"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UpdateOptions"
+                  value="ToolFirmwareOption.UseLatest"/>
+        <property key="ToolFirmwareToolPack"
+                  value="Press to select which tool pack to use"/>
+        <property key="communication.activationmode" value="nohv"/>
+        <property key="communication.interface"
+                  value="${communication.interface.default}"/>
+        <property key="communication.interface.jtag" value="2wire"/>
+        <property key="communication.speed" value="${communication.speed.default}"/>
+        <property key="debugoptions.debug-startup" value="Use system settings"/>
+        <property key="debugoptions.reset-behaviour" value="Use system settings"/>
+        <property key="debugoptions.simultaneous.debug" value="false"/>
+        <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="freeze.timers" value="false"/>
+        <property key="memories.aux" value="false"/>
+        <property key="memories.bootflash" value="true"/>
+        <property key="memories.configurationmemory" value="true"/>
+        <property key="memories.configurationmemory2" value="true"/>
+        <property key="memories.dataflash" value="true"/>
+        <property key="memories.eeprom" value="true"/>
+        <property key="memories.exclude.configurationmemory" value="true"/>
+        <property key="memories.flashdata" value="true"/>
+        <property key="memories.id" value="true"/>
+        <property key="memories.instruction.ram.ranges"
+                  value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.programmemory" value="true"/>
+        <property key="memories.programmemory.ranges" value="0-afeff"/>
+        <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoImageName"
+                  value="dspic33c-touch-can-lin-curiosity-oob_ptg"/>
+        <property key="programoptions.donoteraseauxmem" value="false"/>
+        <property key="programoptions.eraseb4program" value="true"/>
+        <property key="programoptions.ledbrightness" value="5"/>
+        <property key="programoptions.pgcconfig" value="pull down"/>
+        <property key="programoptions.pgcresistor.value" value="4.7"/>
+        <property key="programoptions.pgdconfig" value="pull down"/>
+        <property key="programoptions.pgdresistor.value" value="4.7"/>
+        <property key="programoptions.pgmentry.voltage" value="low"/>
+        <property key="programoptions.pgmspeed" value="Med"/>
+        <property key="programoptions.preservedataflash" value="false"/>
+        <property key="programoptions.preservedataflash.ranges"
+                  value="${memories.dataflash.default}"/>
+        <property key="programoptions.preserveeeprom" value="false"/>
+        <property key="programoptions.preserveeeprom.ranges" value=""/>
+        <property key="programoptions.preserveprogram.ranges" value=""/>
+        <property key="programoptions.preserveprogramrange" value="false"/>
+        <property key="programoptions.preserveuserid" value="false"/>
+        <property key="programoptions.program.otpconfig" value="false"/>
+        <property key="programoptions.programcalmem" value="false"/>
+        <property key="programoptions.programuserotp" value="false"/>
+        <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
+        <property key="ptgProgramImage" value="true"/>
+        <property key="ptgSendImage" value="true"/>
+        <property key="toolpack.updateoptions"
+                  value="toolpack.updateoptions.specifictoolpack"/>
+        <property key="toolpack.updateoptions.packversion" value="1.15.1688"/>
+        <property key="voltagevalue" value="3.25"/>
+      </pk4hybrid>
       <pkob4hybrid>
         <property key="ADC" value="true"/>
         <property key="AutoSelectMemRanges" value="auto"/>
@@ -1405,7 +1531,8 @@
                   value="ToolFirmwareOption.UseLatest"/>
         <property key="ToolFirmwareToolPack"
                   value="Press to select which tool pack to use"/>
-        <property key="communication.interface" value=""/>
+        <property key="communication.interface"
+                  value="${communication.interface.default}"/>
         <property key="communication.interface.jtag" value="2wire"/>
         <property key="communication.speed" value="${communication.speed.default}"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
@@ -1426,10 +1553,12 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-afeff"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/MCU16_repos/github_code_examples/ dspic33c-touch-can-lin-curiosity-oob/ dspic33c-touch-can-lin-curiosity-oob.X/debug/default/ dspic33c-touch-can-lin-curiosity-oob_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>
-        <property key="programoptions.pgmspeed" value="Min"/>
+        <property key="programoptions.pgmspeed" value="Med"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"
                   value="${memories.dataflash.default}"/>
@@ -1443,8 +1572,8 @@
         <property key="programoptions.programuserotp" value="false"/>
         <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
         <property key="toolpack.updateoptions"
-                  value="toolpack.updateoptions.uselatestoolpack"/>
-        <property key="toolpack.updateoptions.packversion" value="1.8.869"/>
+                  value="toolpack.updateoptions.specifictoolpack"/>
+        <property key="toolpack.updateoptions.packversion" value="1.10.1023"/>
       </pkob4hybrid>
     </conf>
   </confs>

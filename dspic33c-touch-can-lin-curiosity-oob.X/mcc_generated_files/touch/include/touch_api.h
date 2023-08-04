@@ -5,13 +5,14 @@
     Microchip Technology Inc.
 
   @File Name
-    datastreamer.h
+    touch_api_ptc.h
 
   @Summary
     QTouch Modular Library
 
   @Description
-    Provides the datastreamer APIs to data visualizer software.
+    Includes the Module API header files based on the configured modules,
+    prototypes for touch.c file and Application helper API functions
 	
 *******************************************************************************/
 /*
@@ -35,21 +36,44 @@
     THIS SOFTWARE.
 */
 
-#ifndef __DATASTREAMER_H_
-#define __DATASTREAMER_H_
+#ifndef TOUCH_API_PTC_H
+#define TOUCH_API_PTC_H
+
+#ifdef __cplusplus
+extern "C" {
+#endif // __cplusplus
 
 /*----------------------------------------------------------------------------
  *     include files
  *----------------------------------------------------------------------------*/
-#include "../touch.h"
 
-#if (DEF_TOUCH_DATA_STREAMER_ENABLE == 1u)
+#include "qtm_common_components_api.h"
+#include "qtm_acq_cvd_dspic33ck_api.h"
+#include "qtm_touch_key_0x0002_api.h"
+#include "qtm_scroller_0x000b_api.h"
+
 /*----------------------------------------------------------------------------
  *   prototypes
  *----------------------------------------------------------------------------*/
-void datastreamer_init(void);
-void datastreamer_output(void);
+/* Application Helper API's */
+uint16_t get_sensor_node_signal(uint16_t sensor_node);
+void     update_sensor_node_signal(uint16_t sensor_node, uint16_t new_signal);
+uint16_t get_sensor_node_reference(uint16_t sensor_node);
+void     update_sensor_node_reference(uint16_t sensor_node, uint16_t new_reference);
+uint16_t get_sensor_cc_val(uint16_t sensor_node);
+void     update_sensor_cc_val(uint16_t sensor_node, uint16_t new_cc_value);
+uint8_t  get_sensor_state(uint16_t sensor_node);
+void     update_sensor_state(uint16_t sensor_node, uint8_t new_state);
+void     calibrate_node(uint16_t sensor_node);
+uint8_t  get_scroller_state(uint16_t sensor_node);
+uint16_t get_scroller_position(uint16_t sensor_node);
 
+void touch_timer_handler(void);
+void touch_init(void);
+void touch_process(void);
+
+#ifdef __cplusplus
+}
 #endif
 
-#endif
+#endif /* TOUCH_API_PTC_H */
