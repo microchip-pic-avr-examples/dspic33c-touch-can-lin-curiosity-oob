@@ -21,7 +21,7 @@ On board general purpose LEDs can also be controlled by sending commands via Dat
 ## Software Used
 
 - [MPLAB® X IDE v6.05](https://www.microchip.com/mplabx) or newer
-- [MPLAB® XC16 v2.00](https://www.microchip.com/xc16) or newer
+- [MPLAB® XC16 v2.10](https://www.microchip.com/xc16) or newer
 - Device Family Pack : dsPIC33CK-MP_DFP v1.10.341
 - [MPLAB® Code Configurator (MCC) 5.2.2](https://www.microchip.com/mcc) or newer
 - [MPLAB® Data Visualizer v1.3.1320](https://www.microchip.com/en-us/tools-resources/debug/mplab-data-visualizer) or any other serial terminal
