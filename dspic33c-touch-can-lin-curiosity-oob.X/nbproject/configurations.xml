@@ -1564,7 +1564,7 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-afeff"/>
         <property key="programmerToGoFilePath"
-                  value="C:/MCU16_repos/github_code_examples/dspic33c-touch-can-lin-curiosity-touch-uart-oob-demo/dspic33c-touch-can-lin-curiosity-oob.X/debug/default/dspic33c-touch-can-lin-curiosity-oob_ptg"/>
+                  value="C:/MCU16_repos/github_code_examples/ dspic33c-touch-can-lin-curiosity-oob/ dspic33c-touch-can-lin-curiosity-oob.X/debug/default/ dspic33c-touch-can-lin-curiosity-oob_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>
