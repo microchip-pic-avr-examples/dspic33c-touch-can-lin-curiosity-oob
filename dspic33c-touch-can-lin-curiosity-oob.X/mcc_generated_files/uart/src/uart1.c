@@ -7,13 +7,15 @@
  *            
  * @brief     This is the generated driver source file for the UART1 driver.
  *            
- * @version   Driver Version 1.4.0
+ * @skipline @version   Firmware Driver Version 1.7.0
+ *
+ * @skipline @version   PLIB Version 1.5.0
  *            
  * @skipline  Device : dsPIC33CK1024MP710
 */
 
 /*
-© [2023] Microchip Technology Inc. and its subsidiaries.
+© [2024] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -64,6 +66,8 @@ const struct UART_INTERFACE TouchUART = {
     .IsTxDone = &UART1_IsTxDone,
     .TransmitEnable = &UART1_TransmitEnable,
     .TransmitDisable = &UART1_TransmitDisable,
+    .TransmitInterruptEnable = NULL,
+    .TransmitInterruptDisable = NULL,
     .AutoBaudSet = &UART1_AutoBaudSet,
     .AutoBaudQuery = &UART1_AutoBaudQuery,
     .AutoBaudEventEnableGet = &UART1_AutoBaudEventEnableGet,
@@ -203,25 +207,25 @@ size_t UART1_ErrorGet(void)
     uartError.status = 0;
     if(U1STAbits.FERR == 1U)
     {
-        uartError.frammingError = uartError.status|UART_ERROR_FRAMING_MASK;
+        uartError.status = uartError.status|UART_ERROR_FRAMING_MASK;
     }
     if(U1STAbits.PERR== 1U)
     {
-        uartError.parityError = uartError.status|UART_ERROR_PARITY_MASK;
+        uartError.status = uartError.status|UART_ERROR_PARITY_MASK;
     }
     if(U1STAbits.OERR== 1U)
     {
-        uartError.overrunError = uartError.status|UART_ERROR_RX_OVERRUN_MASK;
+        uartError.status = uartError.status|UART_ERROR_RX_OVERRUN_MASK;
         U1STAbits.OERR = 0;
     }
     if(U1STAbits.TXCIF== 1U)
     {
-        uartError.txCollisionError = uartError.status|UART_ERROR_TX_COLLISION_MASK;
+        uartError.status = uartError.status|UART_ERROR_TX_COLLISION_MASK;
         U1STAbits.TXCIF = 0;
     }
     if(U1STAbits.ABDOVF== 1U)
     {
-        uartError.autoBaudOverflow = uartError.status|UART_ERROR_AUTOBAUD_OVERFLOW_MASK;
+        uartError.status = uartError.status|UART_ERROR_AUTOBAUD_OVERFLOW_MASK;
         U1STAbits.ABDOVF = 0;
     }
     

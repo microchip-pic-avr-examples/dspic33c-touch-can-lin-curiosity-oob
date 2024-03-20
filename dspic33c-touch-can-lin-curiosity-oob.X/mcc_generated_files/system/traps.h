@@ -7,13 +7,15 @@
  *            
  * @brief     Traps driver with handler for all types of traps using dsPIC MCUs.
  *            
- * @version   Driver Version 1.0.1
+ * @skipline @version   Firmware Driver Version 1.0.3
+ *
+ * @skipline @version   PLIB Version 1.3.1
  *            
  * @skipline  Device : dsPIC33CK1024MP710
 */
 
 /*
-© [2023] Microchip Technology Inc. and its subsidiaries.
+© [2024] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
