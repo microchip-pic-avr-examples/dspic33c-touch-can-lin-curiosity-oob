@@ -106,7 +106,7 @@ static void Process_Touch_Tasks(void)
 
 static void Process_Potentiometer_Tasks(void)
 {
-    float potVoltage;
+    float __attribute__((unused)) float potVoltage;
     potVoltage = POT_VoltageGet();
 }
 
