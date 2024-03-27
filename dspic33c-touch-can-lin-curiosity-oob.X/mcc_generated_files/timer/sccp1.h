@@ -7,13 +7,15 @@
  * 
  * @brief     This is the generated driver header file for the SCCP1-TIMER driver
  *
- * @version   Driver Version 1.4.0
+ * @skipline @version   Firmware Driver Version 1.5.1
+ *
+ * @skipline @version   PLIB Version 1.6.3
  *
  * @skipline  Device : dsPIC33CK1024MP710
 */
 
 /*
-© [2023] Microchip Technology Inc. and its subsidiaries.
+© [2024] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -81,11 +83,15 @@ extern const struct TIMER_INTERFACE CMDTimer;
  * @brief    This macro defines the Custom Name for \ref SCCP1_Timer_Stop API
  */
 #define CMDTimer_Stop SCCP1_Timer_Stop
+
+#if TIMER_PERIODCOUNTSET_API_SUPPORT
 /**
  * @ingroup  timerdriver
  * @brief    This macro defines the Custom Name for \ref SCCP1_Timer_PeriodCountSet API
  */
 #define CMDTimer_PeriodCountSet SCCP1_Timer_PeriodCountSet
+#endif
+
 /**
  * @ingroup  timerdriver
  * @brief    This macro defines the Custom Name for \ref SCCP1_Timer_PeriodSet API
@@ -123,6 +129,7 @@ extern const struct TIMER_INTERFACE CMDTimer;
 /**
  * @ingroup  timerdriver
  * @brief    Initializes the SCCP1 module 
+ * @param    none
  * @return   none  
  */
 void SCCP1_Timer_Initialize (void);
@@ -130,6 +137,7 @@ void SCCP1_Timer_Initialize (void);
 /**
  * @ingroup  timerdriver
  * @brief    Deinitializes the SCCP1 to POR values
+ * @param    none
  * @return   none  
  */
 void SCCP1_Timer_Deinitialize(void);
@@ -138,6 +146,7 @@ void SCCP1_Timer_Deinitialize(void);
  * @ingroup  timerdriver
  * @brief    Starts the timer
  * @pre      \ref SCCP1_Timer_Initialize must be called
+ * @param    none
  * @return   none  
  */
 void SCCP1_Timer_Start(void);
@@ -146,6 +155,7 @@ void SCCP1_Timer_Start(void);
  * @ingroup  timerdriver
  * @brief    Stops the timer
  * @pre      \ref SCCP1_Timer_Initialize must be called
+ * @param    none
  * @return   none  
  */
 void SCCP1_Timer_Stop(void);
@@ -163,6 +173,7 @@ void SCCP1_Timer_PeriodSet(uint32_t count);
  * @ingroup  timerdriver
  * @brief    This inline function gets the SCCP1-Timer period count value
  * @pre      \ref SCCP1_Timer_Initialize must be called
+ * @param    none
  * @return   Period count value  
  */
 inline static uint32_t SCCP1_Timer_PeriodGet(void)
@@ -180,6 +191,7 @@ inline static uint32_t SCCP1_Timer_PeriodGet(void)
 /**
  * @ingroup  timerdriver
  * @brief    This inline function gets the SCCP1-Timer elapsed count value
+ * @param    none
  * @return   Elapsed count value of the timer  
  */
 inline static uint32_t SCCP1_Timer_CounterGet(void)
@@ -197,6 +209,7 @@ inline static uint32_t SCCP1_Timer_CounterGet(void)
 /**
  * @ingroup  timerdriver
  * @brief    This inline function gets the SCCP1-Timer least significant 16 bit elapsed count value
+ * @param    none
  * @return   Least significant 16 bit elapsed count value of the timer  
  */
 inline static uint16_t SCCP1_Timer_Counter16BitGet(void)
@@ -207,6 +220,7 @@ inline static uint16_t SCCP1_Timer_Counter16BitGet(void)
 /**
  * @ingroup  timerdriver
  * @brief    Sets the Interrupt Priority Value 
+ * @param    none
  * @return   none  
  */
 void SCCP1_Timer_InterruptPrioritySet(enum INTERRUPT_PRIORITY priority);
@@ -235,11 +249,13 @@ void SCCP1_TimeoutCallbackRegister(void* handler)__attribute__((deprecated("\nTh
  * @brief    This is the default callback with weak attribute. The user can 
  *           override and implement the default callback without weak attribute 
  *           or can register a custom callback function using  \ref SCCP1_Timer_TimeoutCallbackRegister.
+ * @param    none
  * @return   none  
  */
 void SCCP1_TimeoutCallback(void);
 
 
+#if TIMER_PERIODCOUNTSET_API_SUPPORT
 /**
  * @ingroup  timerdriver
  * @brief    Sets the SCCP1-Timer period count value
@@ -248,7 +264,7 @@ void SCCP1_TimeoutCallback(void);
  * @return   none  
  */
 void SCCP1_Timer_PeriodCountSet(size_t count)__attribute__((deprecated ("\nThis will be removed in future MCC releases. \nUse SCCP1_Timer_PeriodSet instead. ")));
-
+#endif
 #endif //SCCP1_H
 
 /**

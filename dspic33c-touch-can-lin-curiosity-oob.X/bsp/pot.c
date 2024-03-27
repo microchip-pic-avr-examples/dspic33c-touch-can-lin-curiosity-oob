@@ -1,6 +1,6 @@
 
 /*
-© [2023] Microchip Technology Inc. and its subsidiaries.
+© [2024] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -22,7 +22,7 @@
 
 #include <stdbool.h>
 #include "../mcc_generated_files/adc/adc1.h"
-#include "../mcc_generated_files/touch/touch_api.h"
+#include "../mcc_generated_files/touch/include/touch_api.h"
 #include "pot.h"
 
 void POT_Initialize(void)
@@ -56,7 +56,7 @@ float POT_VoltageGet(void)
 
 void ADC_CommonCallback(void)
 {
-    qtm_dspic33_touch_handler_eoc();
+    qtm_dspic33c_touch_handler_eoc();
 }
 
 void __attribute__ ( ( __interrupt__ , auto_psv ) ) _ADCInterrupt ( void )

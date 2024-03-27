@@ -1306,7 +1306,6 @@ DB_TYPE_LABEL, // Element Type
 255, 0, 0, 0, // Foreground Color
 'I','n','d','i','c','a','t','e','s',' ','l','i','b','r','a','r','y',' ','e','r','r','o','r',' ','s','t','a','t','e','.',' ','Z','e','r','o',':',' ','n','o',' ','e','r','r','o','r','.',' ','R','e','f','e','r',' ','"','E','r','r','o','r',' ','C','o','d','e','"',' ','s','e','c','t','i','o','n',' ','i','n',' ','U','s','e','r',' ','G','u','i','d','e','\0', // Text
 };
-
 {
 0:0:4, // Dashboard ID TabGroupID TabElementID
 21, // Element ID

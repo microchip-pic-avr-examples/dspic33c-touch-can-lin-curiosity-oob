@@ -1,5 +1,5 @@
 /*
-© [2023] Microchip Technology Inc. and its subsidiaries.
+© [2024] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -18,15 +18,12 @@
     EXCEED AMOUNT OF FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR 
     THIS SOFTWARE.
 */
-
 #include "mcc_generated_files/system/system.h"
 #include "application/application.h"
 #include "mcc_generated_files/touch/example/touch_example.h"
-
 /*
     Main application
 */
-
 
 int main(void)
 {
@@ -35,6 +32,6 @@ int main(void)
 
     while(1)
     {
-        Application_Tasks();
+        Application_Tasks();    
     }    
 }

@@ -7,13 +7,15 @@
  *            
  * @brief     Universal Asynchronous Receiver Transmitter driver using dsPIC MCUs
  *            
- * @version   Driver Version 1.4.0
+ * @skipline @version   Firmware Driver Version 1.7.0
+ *
+ * @skipline @version   PLIB Version 1.5.0
  *            
  * @skipline  Device : dsPIC33CK1024MP710
 */
     
 /*
-© [2023] Microchip Technology Inc. and its subsidiaries.
+© [2024] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -78,6 +80,12 @@ struct UART_INTERFACE{
     void (*TransmitDisable)(void);
     ///< Pointer to UARTx_TransmitDisable e.g. \ref UART1_TransmitDisable
     
+    void (*TransmitInterruptEnable)(void);
+    ///< Pointer to UARTx_TransmitInterruptEnable e.g. \ref UART1_TransmitInterruptEnable
+    
+    void (*TransmitInterruptDisable)(void);
+    ///< Pointer to UARTx_TransmitInterruptDisable e.g. \ref UART1_TransmitInterruptDisable
+    
     void (*AutoBaudSet)(bool enable);
     ///< Pointer to UARTx_AutoBaudSet e.g. \ref UART1_AutoBaudSet
     
@@ -102,17 +110,17 @@ struct UART_INTERFACE{
     size_t (*ErrorGet)(void);
     ///< Pointer to UARTx_ErrorGet e.g. \ref UART1_ErrorGet
     
-    void (*RxCompleteCallbackRegister)(void (*CallbackHandler));
+    void (*RxCompleteCallbackRegister)(void (*CallbackHandler)(void));
     ///< Pointer to UARTx_RxCompleteCallbackRegister e.g. \ref UART1_RxCompleteCallbackRegister (defined only in interrupt mode)
-    void (*TxCompleteCallbackRegister)(void (*CallbackHandler));
+    void (*TxCompleteCallbackRegister)(void (*CallbackHandler)(void));
     ///< Pointer to UARTx_TxCompleteCallbackRegister e.g. \ref UART1_TxCompleteCallbackRegister (defined only in interrupt mode)
-    void (*TxCollisionCallbackRegister)(void (*CallbackHandler));
+    void (*TxCollisionCallbackRegister)(void (*CallbackHandler)(void));
     ///< Pointer to UARTx_TxCollisionCallbackRegister e.g. \ref UART1_TxCollisionCallbackRegister (defined only in interrupt mode)
-    void (*FramingErrorCallbackRegister)(void (*CallbackHandler));
+    void (*FramingErrorCallbackRegister)(void (*CallbackHandler)(void));
     ///< Pointer to UARTx_FramingErrorCallbackRegister e.g. \ref UART1_FramingErrorCallbackRegister (defined only in interrupt mode)
-    void (*OverrunErrorCallbackRegister)(void (*CallbackHandler));
+    void (*OverrunErrorCallbackRegister)(void (*CallbackHandler)(void));
     ///< Pointer to UARTx_OverrunErrorCallbackRegister e.g. \ref UART1_OverrunErrorCallbackRegister (defined only in interrupt mode)
-    void (*ParityErrorCallbackRegister)(void (*CallbackHandler));
+    void (*ParityErrorCallbackRegister)(void (*CallbackHandler)(void));
     ///< Pointer to UARTx_ParityErrorCallbackRegister e.g. \ref UART1_ParityErrorCallbackRegister (defined only in interrupt mode)
 };
 #endif
