@@ -7,13 +7,15 @@
  * 
  * @brief     This is the generated driver source file for SCCP1-TIMER driver
  *
- * @version   Driver Version 1.4.0
+ * @skipline @version   Firmware Driver Version 1.5.1
+ *
+ * @skipline @version   PLIB Version 1.6.3
  *
  * @skipline  Device : dsPIC33CK1024MP710
 */
 
 /*
-© [2023] Microchip Technology Inc. and its subsidiaries.
+© [2024] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -37,6 +39,7 @@
 
 #include <stddef.h> 
 #include "../sccp1.h"
+#include "../timer_interface.h"
 
 // Section: Data Type Definitions
 
@@ -56,7 +59,9 @@ const struct TIMER_INTERFACE CMDTimer = {
     .Deinitialize   = &SCCP1_Timer_Deinitialize,
     .Start          = &SCCP1_Timer_Start,
     .Stop           = &SCCP1_Timer_Stop,
+    #if TIMER_PERIODCOUNTSET_API_SUPPORT
     .PeriodCountSet = &SCCP1_Timer_PeriodCountSet,
+    #endif
     .PeriodSet      = &SCCP1_Timer_PeriodSet,
     .CounterGet     = &SCCP1_Timer_CounterGet,
     .PeriodGet	    = &SCCP1_Timer_PeriodGet,

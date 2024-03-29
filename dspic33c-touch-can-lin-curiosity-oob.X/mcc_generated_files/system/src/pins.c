@@ -7,15 +7,15 @@
  *            
  * @brief     This is the generated driver source file for PINS driver.
  *
- * @version   Firmware Driver Version 1.0.1
+ * @skipline @version   Firmware Driver Version 1.0.2
  *
- * @version   PLIB Version 1.1.0
+ * @skipline @version   PLIB Version 1.3.0
  *
  * @skipline  Device : dsPIC33CK1024MP710
 */
 
 /*
-© [2023] Microchip Technology Inc. and its subsidiaries.
+© [2024] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 

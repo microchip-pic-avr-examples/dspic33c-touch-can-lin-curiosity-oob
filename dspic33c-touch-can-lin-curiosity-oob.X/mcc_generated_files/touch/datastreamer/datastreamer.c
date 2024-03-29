@@ -1,5 +1,5 @@
 /*******************************************************************************
-  Touch Library 3.0.0 Release
+  Touch Library 4.0.0 Release
 
   @Company
     Microchip Technology Inc.
@@ -16,7 +16,7 @@
 	
 *******************************************************************************/
 /*
-© [2023] Microchip Technology Inc. and its subsidiaries.
+© [2024] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -120,7 +120,8 @@ void datastreamer_output(void)
     union {
         float tempInFloat;
         uint8_t tempInBytes[4];
-    } tempFloatnBytes;	uint8_t           u8temp_output, send_header;
+    } tempFloatnBytes;
+	uint8_t           u8temp_output, send_header;
 	volatile uint16_t count_bytes_out;
 
 	send_header = sequence & (0x0f);
@@ -160,8 +161,9 @@ void datastreamer_output(void)
 		datastreamer_transmit((uint8_t)(u16temp_output >> 8u));
 
 		/* CSD */
-		u8temp_output = qtlib_acq_set1.qtm_acq_node_config[count_bytes_out].node_csd;
-		datastreamer_transmit(u8temp_output);
+		u16temp_output = qtlib_acq_set1.qtm_acq_node_config[count_bytes_out].node_csd;
+		datastreamer_transmit((uint8_t)u16temp_output);
+        datastreamer_transmit((uint8_t)(u16temp_output >> 8u));
 
 		/* State */
 		u8temp_output = get_sensor_state(count_bytes_out);

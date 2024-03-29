@@ -6,7 +6,7 @@ D,2,1,Signal0
 D,3,1,Reference0
 -D,4,1,Delta0
 D,5,1,Compensation0,F,0
-B,6,1,CSD0
+D,6,1,CSD0
 B,7,1,State0
 B,8,1,Threshold0
 
@@ -14,7 +14,7 @@ D,2,2,Signal1
 D,3,2,Reference1
 -D,4,2,Delta1
 D,5,2,Compensation1,F,0
-B,6,2,CSD1
+D,6,2,CSD1
 B,7,2,State1
 B,8,2,Threshold1
 
@@ -22,7 +22,7 @@ D,2,3,Signal2
 D,3,3,Reference2
 -D,4,3,Delta2
 D,5,3,Compensation2,F,0
-B,6,3,CSD2
+D,6,3,CSD2
 B,7,3,State2
 B,8,3,Threshold2
 
