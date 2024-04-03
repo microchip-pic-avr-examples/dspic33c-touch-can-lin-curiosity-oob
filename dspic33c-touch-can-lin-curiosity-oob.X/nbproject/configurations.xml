@@ -50,7 +50,6 @@
             <itemPath>mcc_generated_files/touch/example/touch_example.h</itemPath>
           </logicalFolder>
           <logicalFolder name="include" displayName="include" projectFiles="true">
-            <itemPath>mcc_generated_files/touch/include/qtm_acq_cvd_dspic33ck_api.h</itemPath>
             <itemPath>mcc_generated_files/touch/include/qtm_common_components_api.h</itemPath>
             <itemPath>mcc_generated_files/touch/include/qtm_scroller_0x000b_api.h</itemPath>
             <itemPath>mcc_generated_files/touch/include/qtm_touch_key_0x0002_api.h</itemPath>
